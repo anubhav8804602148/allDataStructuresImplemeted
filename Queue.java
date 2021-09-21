@@ -1,7 +1,11 @@
 package dataStructure;
 
 import java.lang.reflect.Array;
-
+/*
+ * Queue<RequiredClass> que = new Queue<>(RequiredClass.class);
+ * que.enqueue(data) -> enqueued_or_not ? true : false // data should be of RequiredClass type
+ * que.dequeue() -> data_available_or_not ? front_data : null
+ */
 public class Queue <T>{
 	private T[] queueArr;
 	private int front;

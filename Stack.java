@@ -1,7 +1,13 @@
 package dataStructure;
 
 import java.lang.reflect.Array;
-
+/*
+ * Stack<RequiredClass> st = new Stack<>(RequiredClass.class);
+ * 
+ * st.push(data) -> pushed_or_not ? true : false 		// data should be of RequiredClass type
+ * st.pop() -> data_available_or_not ? top_data : null	// 
+ * st.toString() -> return entire_string_from_top_to_bottom
+ */
 public class Stack<T> {
 	
 	private T[] stackArr;
