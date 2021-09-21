@@ -56,4 +56,12 @@ public class Queue <T>{
 		front++;
 		return res;
 	}
+	public String toString() {
+		String res = "<front>";
+		for(int i=front;i<=back;i++) {
+			res += queueArr[i].toString()+" ";
+		}
+		res += "<back>";
+		return res;
+	}
 }

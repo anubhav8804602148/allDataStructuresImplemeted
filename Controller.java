@@ -2,14 +2,12 @@ package dataStructure;
 
 public class Controller {
 	public static void main(String args[]) {
-		Queue<Integer> s1 = new Queue<>(Integer.class);
-		for(int i=0;i<10;i++) {
-			s1.enqueue(i*i);
-		}
-		for(int i=0;i<5;i++)System.out.print(s1.dequeue()+" ");
-		for(int i=10;i<20;i++) {
-			s1.enqueue(i*i);
-		}
-		for(int i=0;i<50;i++)System.out.print(s1.dequeue()+" ");
+		LinkedList list = new LinkedList();
+		for(int i=0;i<10;i++)list.add(i);
+		list.add(15,100);
+		System.out.println(list.toString());
+		list.remove(3);
+		list.remove(4);
+		System.out.println(list.toString());
 	}
 }
