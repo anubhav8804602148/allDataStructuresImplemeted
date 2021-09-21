@@ -30,10 +30,26 @@ public class Queue <T>{
 			queueArr[back] = data;
 			return true;
 		}
-		if(front==-1 || back==-1 || front>maxSize-1) {
+		if(front==-1 || back==-1 || back>=maxSize-1) {
 			return false;
 		}
-		
-		return false;
+		back++;
+		queueArr[back] = data;
+		return true;
+	}
+	public T dequeue() {
+		T res = null;
+		if(front==-1 && back==-1) {
+			return null;
+		}
+		if(front==back) {
+			res = queueArr[front];
+			front=-1;
+			back=-1;
+			return res;
+		}
+		res = queueArr[front];
+		front++;
+		return res;
 	}
 }
