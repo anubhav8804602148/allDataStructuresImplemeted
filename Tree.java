@@ -14,6 +14,9 @@ public class Tree{
 		case "IN":
 			traversalIn(root);
 			break;
+		case "LEVEL":
+			traversalLevel(root);
+			break;
 		default:
 			System.err.println("Invalid Choice!!");
 		}
@@ -35,5 +38,19 @@ public class Tree{
 		traversalIn(curr.left);
 		System.out.print(curr.data + " ");
 		traversalIn(curr.right);
+	}
+	private void traversalLevel(TreeNode curr) {
+		Queue<TreeNode> dataQueue = new Queue<>(TreeNode.class);
+		if(curr==null) return;
+		System.out.print(curr.data + " ");
+		dataQueue.enqueue(curr.left);
+		dataQueue.enqueue(curr.right);
+		while(dataQueue.getSize()>0) {
+			TreeNode temp = dataQueue.dequeue();
+			if(temp!=null)System.out.print(temp.data+" ");
+			if(temp.left!=null) dataQueue.enqueue(temp.left);
+			if(temp.right!=null) dataQueue.enqueue(temp.right);
+		}
+		
 	}
 }

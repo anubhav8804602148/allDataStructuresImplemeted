@@ -23,6 +23,8 @@ public class Controller {
 		tree.printTree("POST");
 		System.out.println();
 		tree.printTree("IN");
+		System.out.println();
+		tree.printTree("LEVEL");
 	}
 }
 

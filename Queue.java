@@ -64,4 +64,8 @@ public class Queue <T>{
 		res += "<back>";
 		return res;
 	}
+	public int getSize() {
+		if(front==-1 && back==-1) return 0;
+		return back-front+1;
+	}
 }
