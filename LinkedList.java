@@ -1,7 +1,7 @@
 package dataStructure;
 
 public class LinkedList {
-	Node root;
+	private Node root;
 	
 	public Node add(int data){
 		if(root==null) {
@@ -24,7 +24,14 @@ public class LinkedList {
 	}
 	public Node add(int index, int data) {
 		Node temp = root;
-		for(int i=0;i<index-2;i++) {
+		if(index==0) {
+			Node toInsert = new Node();
+			toInsert.data = data;
+			toInsert.next = root;
+			root = toInsert;
+			return root;
+		}
+		for(int i=0;i<index-1;i++) {
 			try {
 				temp = temp.next;
 			}
@@ -50,7 +57,7 @@ public class LinkedList {
 	}
 	public Node remove(int index) {
 		Node temp = root;
-		for(int i=0;i<index-2;i++) {
+		for(int i=0;i<index-1;i++) {
 			try {
 				temp = temp.next;
 			}
