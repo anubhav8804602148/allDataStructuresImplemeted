@@ -54,4 +54,7 @@ public class Stack<T> {
 		res += "<bottom>\n";
 		return res;
 	}
+	public int getSize() {
+		return top+1;
+	}
 }
